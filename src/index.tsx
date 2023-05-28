@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ProviderRpcClient } from 'everscale-inpage-provider';
+
+const provider = new ProviderRpcClient()
+
+provider.getAccountsByCodeHash({ codeHash: 'e5bc183e3bbc2ef49d380edca5640e3f72fca6416310e9a258dbb53949177784' })
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
